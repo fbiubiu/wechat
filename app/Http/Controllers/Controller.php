@@ -19,6 +19,7 @@ class Controller extends BaseController
         $verifiedParams = [$params['timestamp'], $params['nonce'], $token];
         sort($verifiedParams, SORT_STRING);
         $verifiedStr = sha1(implode($verifiedParams));
+        file_put_contents('/server/website/wechat/storage/logs/wechat.log',$verifiedStr.':'.$params['signature']."\n",FILE_APPEND);
         if( $verifiedStr ==  $params['signature']){
             return true;
         }else{
