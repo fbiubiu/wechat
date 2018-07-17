@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('test', 'Controller@test');
-Route::get('accessToken', 'Controller@accessToken');
+Route::get('verifytoken', 'Controller@verifyToken');
+Route::get('accesstoken', 'Controller@accessToken');
 

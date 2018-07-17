@@ -18,6 +18,8 @@ class WechatApi
 
     public $appsecret = '2dda7e52485e0c66269aacb62961f709';
 
+    const TOKEN= 'fbiubiu';
+
     public function getAccessToken()
     {
         $paramsGet = 'grant_type=client_credential&appid='.$this->appId.'&secret='.$this->appsecret;
