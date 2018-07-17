@@ -14,15 +14,19 @@ class Controller extends BaseController
 
     public function verifyToken()
     {
+        umask(0);
         $params = request()->all();
+        $params = [
+            'timestamp' => time(),
+            'nonce' => 'nonce',
+            'signature' => '1111',
+        ];
         $token = WechatApi::TOKEN;
         $verifiedParams = [$params['timestamp'], $params['nonce'], $token];
         sort($verifiedParams, SORT_STRING);
         $verifiedStr = sha1(implode($verifiedParams));
-        $filename = '/server/website/wechat/storage/logs/wechat.log';
-        if(!is_dir($filename)){
-            mkdir($filename, '0755');
-        }
+        $filename = __DIR__.'/../../../storage/logs/wechat.log';
+
         file_put_contents($filename,$verifiedStr.':'.$params['signature']."\n",FILE_APPEND);
         if( $verifiedStr ==  $params['signature']){
             return true;
