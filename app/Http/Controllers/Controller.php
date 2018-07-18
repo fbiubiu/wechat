@@ -16,18 +16,24 @@ class Controller extends BaseController
      * token验证方法
      * @return bool
      */
-    public function verifyToken()
+    public function index()
     {
         $params = request()->all();
+        $filename = __DIR__.'/../../../storage/logs/wechat.log';
+        file_put_contents($filename,'params:'.json_encode($params)."\n",FILE_APPEND);
+
         $token = WechatApi::TOKEN;
-        $verifiedParams = [$params['timestamp'], $params['nonce'], $token];
+        $timestamp = $params['timestamp'] ?? '';
+        $nonce = $params['nonce'] ?? '';
+        $signature = $params['signature'] ?? '';
+        $echostr = $params['echostr'] ?? '';
+
+        $verifiedParams = [$timestamp, $nonce, $token];
         sort($verifiedParams, SORT_STRING);
         $verifiedStr = sha1(implode($verifiedParams));
-        $filename = __DIR__.'/../../../storage/logs/wechat.log';
-
-        file_put_contents($filename,$verifiedStr.':'.$params['signature']."\n".'echostr:'.$params['echostr']."\n",FILE_APPEND);
-        if( $verifiedStr ==  $params['signature']){
-            return $params['echostr'];
+        file_put_contents($filename,'verifyData:'.$verifiedStr.':'.$signature."\n".'echostr:'.$echostr."\n",FILE_APPEND);
+        if( $verifiedStr ==  $signature){
+            return $echostr;
         }else{
             return false;
         }
@@ -42,8 +48,5 @@ class Controller extends BaseController
         return $accessTokenData;
     }
 
-    public function test()
-    {
-        echo 1;die;
-    }
+
 }
