@@ -13,16 +13,20 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     /*
-     * token验证方法
+     * 微信配置路由
      * @return bool
      */
     public function index()
     {
-        $filename = __DIR__.'/../../../storage/logs/wechat.log';
-        file_put_contents($filename,"params:111\n",FILE_APPEND);
-        echo 111;die;
+//        $filename = __DIR__.'/../../../storage/logs/wechat.log';
+//        file_put_contents($filename,"params:111\n",FILE_APPEND);
+        return $this->checkToken();
     }
 
+    /*
+     * token验证方法
+     * @return bool
+     */
     private function checkToken()
     {
         $filename = __DIR__.'/../../../storage/logs/wechat.log';
