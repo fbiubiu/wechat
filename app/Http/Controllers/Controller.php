@@ -16,11 +16,6 @@ class Controller extends BaseController
     {
         umask(0);
         $params = request()->all();
-        $params = [
-            'timestamp' => time(),
-            'nonce' => 'nonce',
-            'signature' => '1111',
-        ];
         $token = WechatApi::TOKEN;
         $verifiedParams = [$params['timestamp'], $params['nonce'], $token];
         sort($verifiedParams, SORT_STRING);
@@ -29,9 +24,9 @@ class Controller extends BaseController
 
         file_put_contents($filename,$verifiedStr.':'.$params['signature']."\n",FILE_APPEND);
         if( $verifiedStr ==  $params['signature']){
-            return 1;
+            return true;
         }else{
-            return 0;
+            return false;
         }
     }
 
