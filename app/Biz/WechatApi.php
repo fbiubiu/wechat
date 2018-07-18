@@ -14,9 +14,9 @@ class WechatApi
         'accessToken' => 'https://api.weixin.qq.com/cgi-bin/token',
     ];
 
-    public $appId = 'wx4381134f02842d5e';
+    public $appId = 'wx4703e6551e4c0ad4';
 
-    public $appsecret = '2dda7e52485e0c66269aacb62961f709';
+    public $appsecret = 'b5827fd9b6e3c5a75f3f9d143b22d299';
 
     const TOKEN= 'fbiubiu';
 
