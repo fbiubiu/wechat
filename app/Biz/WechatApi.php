@@ -16,7 +16,7 @@ class WechatApi
 
     public $appId = 'wx4703e6551e4c0ad4';
 
-    public $appsecret = 'b5827fd9b6e3c5a75f3f9d143b22d299';
+    public $appsecret = 'c33235211da16a3267592199e3bc1b36';
 
     const TOKEN= 'fbiubiu';
 
