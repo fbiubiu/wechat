@@ -20,7 +20,7 @@ class Controller extends BaseController
     {
         $filename = __DIR__.'/../../../storage/logs/wechat.log';
         file_put_contents($filename,"params:111\n",FILE_APPEND);
-
+        return true;
     }
 
     private function checkToken()
