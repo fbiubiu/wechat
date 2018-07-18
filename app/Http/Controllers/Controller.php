@@ -53,8 +53,19 @@ class Controller extends BaseController
      */
     public function accessToken()
     {
-        $accessTokenData = (new WechatApi())->getAccessToken();
-        return $accessTokenData;
+        $redis = new Redis();
+        $redis->connect('127.0.0.1', 6379);
+        $key = 'wechat:access_token';
+        $access_token = $redis->get($key);
+        if(empty($access_token)){
+            $accessTokenData = (new WechatApi())->getAccessToken();
+            $accessTokenData = json_decode($accessTokenData,true);
+            $access_token = $accessTokenData['access_token'];
+            $expire_time = $accessTokenData['expires_in'];
+            $redis->setex($key,$access_token,$expire_time);
+        }
+
+        return $access_token;
     }
 
     public function responseMsg()
@@ -96,6 +107,11 @@ class Controller extends BaseController
     {
         $filename = __DIR__.'/../../../storage/logs/wechat.log';
         file_put_contents($filename,'content:'.json_encode($content)."\n",FILE_APPEND);
+    }
+
+    public function createMenu()
+    {
+        $accessToken = $this->accessToken();
     }
 
 }
