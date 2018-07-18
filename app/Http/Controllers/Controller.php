@@ -29,9 +29,9 @@ class Controller extends BaseController
 
         file_put_contents($filename,$verifiedStr.':'.$params['signature']."\n",FILE_APPEND);
         if( $verifiedStr ==  $params['signature']){
-            return true;
+            return 1;
         }else{
-            return false;
+            return 0;
         }
     }
 
