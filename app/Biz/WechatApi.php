@@ -26,6 +26,6 @@ class WechatApi
         $url = $this->apiUrl['accessToken'].'?'.$paramsGet;
         $client = new Client();
         $res = $client->request('GET',$url);
-        print_r($res->getBody());die;
+        return $res;
     }
 }

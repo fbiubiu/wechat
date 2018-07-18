@@ -12,9 +12,12 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    /*
+     * token验证方法
+     * @return bool
+     */
     public function verifyToken()
     {
-        umask(0);
         $params = request()->all();
         $token = WechatApi::TOKEN;
         $verifiedParams = [$params['timestamp'], $params['nonce'], $token];
@@ -30,9 +33,13 @@ class Controller extends BaseController
         }
     }
 
+    /*
+     * 获取accessToken
+     */
     public function accessToken()
     {
-        (new WechatApi())->getAccessToken();
+        $accessTokenData = (new WechatApi())->getAccessToken();
+        return $accessTokenData;
     }
 
     public function test()
