@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 Route::get('verifytoken', 'Controller@verifyToken');
 Route::get('accesstoken', 'Controller@accessToken');
+Route::get('test', 'Controller@test');
 

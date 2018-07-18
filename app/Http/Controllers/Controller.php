@@ -39,4 +39,9 @@ class Controller extends BaseController
     {
         (new WechatApi())->getAccessToken();
     }
+
+    public function test()
+    {
+        echo 1;die;
+    }
 }
