@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Biz\WechatApi;
+use \Redis;
 
 class Controller extends BaseController
 {
@@ -54,7 +55,7 @@ class Controller extends BaseController
     public function accessToken()
     {
         $redis = new Redis();
-        $redis->connect('127.0.0.1', 6379);
+        $redis->connect('127.0.0.1');
         $key = 'wechat:access_token';
         $access_token = $redis->get($key);
         if(empty($access_token)){
