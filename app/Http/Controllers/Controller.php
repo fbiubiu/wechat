@@ -22,9 +22,9 @@ class Controller extends BaseController
         $verifiedStr = sha1(implode($verifiedParams));
         $filename = __DIR__.'/../../../storage/logs/wechat.log';
 
-        file_put_contents($filename,$verifiedStr.':'.$params['signature']."\n",FILE_APPEND);
+        file_put_contents($filename,$verifiedStr.':'.$params['signature']."\n".'echostr:'.$params['echostr']."\n",FILE_APPEND);
         if( $verifiedStr ==  $params['signature']){
-            return true;
+            return $params['echostr'];
         }else{
             return false;
         }
