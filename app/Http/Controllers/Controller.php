@@ -64,7 +64,7 @@ class Controller extends BaseController
             $accessTokenData = json_decode($accessTokenData,true);
             $access_token = $accessTokenData['access_token'];
             $expire_time = $accessTokenData['expires_in'];
-            $redis->setex($key,$access_token,$expire_time);
+            $redis->setex($key,$expire_time,$access_token);
         }
 
         return $access_token;
