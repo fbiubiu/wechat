@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Biz\WechatApi;
 use \Redis;
+use GuzzleHttp\Client;
 
 class Controller extends BaseController
 {
@@ -114,6 +115,36 @@ class Controller extends BaseController
     public function createMenu()
     {
         $accessToken = $this->accessToken();
+        $url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$accessToken;
+
+        $requesData = [
+            'button' => [
+                [
+                    'type' => 'click',
+                    'name' => '每日一词',
+                    'key' =>  'V1001_DAILY_WORD'
+                ],
+                [
+                    'type' => 'click',
+                    'name' => '机经',
+                    'key' =>  'V1001_jijing'
+                ]
+            ],
+
+        ];
+
+        $client = new Client();
+        $res = $client->request('POST',$url, $requesData);
+        $res = $res->getBody();
+        $res = json_decode($res,true);
+
+        if($res['errcode'] == 0){
+            echo 'success';
+        }else{
+            echo 'error';
+        }
+        return $res;
+
     }
 
 }
