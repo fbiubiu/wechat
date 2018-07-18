@@ -6772,11 +6772,11 @@
       <file leaf-file-name="Controller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
-                <marker date="1531912404633" expanded="true" signature="2527:2906" ph="..." />
+                <marker date="1531912528472" expanded="true" signature="2564:2943" ph="..." />
               </folding>
             </state>
           </provider>
@@ -7091,12 +7091,12 @@
       <updated>1531538821418</updated>
       <workItem from="1531538827190" duration="3318000" />
       <workItem from="1531738782886" duration="14924000" />
-      <workItem from="1531830045756" duration="22017000" />
+      <workItem from="1531830045756" duration="22144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40259000" />
+    <option name="totallyTimeSpent" value="40386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="176" y="43" width="1936" height="1056" extended-state="0" />
@@ -7242,7 +7242,7 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
-            <marker date="1531912404633" expanded="true" signature="2527:2906" ph="..." />
+            <marker date="1531912528472" expanded="true" signature="2564:2943" ph="..." />
           </folding>
         </state>
       </provider>
@@ -7521,11 +7521,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        <state relative-caret-position="150">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
-            <marker date="1531912404633" expanded="true" signature="2527:2906" ph="..." />
+            <marker date="1531912528472" expanded="true" signature="2564:2943" ph="..." />
           </folding>
         </state>
       </provider>

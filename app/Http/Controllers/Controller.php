@@ -56,6 +56,7 @@ class Controller extends BaseController
     {
         $redis = new Redis();
         $redis->connect('127.0.0.1');
+        $redis->auth('fengphp@126');
         $key = 'wechat:access_token';
         $access_token = $redis->get($key);
         if(empty($access_token)){
