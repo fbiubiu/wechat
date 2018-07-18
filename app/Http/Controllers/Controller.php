@@ -18,15 +18,22 @@ class Controller extends BaseController
      */
     public function index()
     {
-        $params = request()->all();
         $filename = __DIR__.'/../../../storage/logs/wechat.log';
+        file_put_contents($filename,"params:111\n",FILE_APPEND);
+
+    }
+
+    private function checkToken()
+    {
+        $filename = __DIR__.'/../../../storage/logs/wechat.log';
+        $params = request()->all();
         file_put_contents($filename,'params:'.json_encode($params)."\n",FILE_APPEND);
 
         $token = WechatApi::TOKEN;
-        $timestamp = $params['timestamp'] ?? '';
-        $nonce = $params['nonce'] ?? '';
-        $signature = $params['signature'] ?? '';
-        $echostr = $params['echostr'] ?? '';
+        $timestamp = $params['timestamp'];
+        $nonce = $params['nonce'];
+        $signature = $params['signature'];
+        $echostr = $params['echostr'];
 
         $verifiedParams = [$timestamp, $nonce, $token];
         sort($verifiedParams, SORT_STRING);
