@@ -6772,11 +6772,11 @@
       <file leaf-file-name="Controller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+            <state relative-caret-position="162">
+              <caret line="116" column="44" lean-forward="true" selection-start-line="116" selection-start-column="44" selection-end-line="116" selection-end-column="44" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
-                <marker date="1531912664752" expanded="true" signature="2564:2943" ph="..." />
+                <marker date="1531918048995" expanded="true" signature="2587:2966" ph="..." />
               </folding>
             </state>
           </provider>
@@ -6845,8 +6845,8 @@
       <file leaf-file-name="WechatApi.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Biz/WechatApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="641">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="29" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -6855,8 +6855,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="300">
+              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -6893,8 +6893,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Biz/WechatApi.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/storage/logs/wechat.log" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
       </list>
     </option>
@@ -6909,8 +6909,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="176" />
-    <option name="y" value="43" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -7091,15 +7091,15 @@
       <updated>1531538821418</updated>
       <workItem from="1531538827190" duration="3318000" />
       <workItem from="1531738782886" duration="14924000" />
-      <workItem from="1531830045756" duration="22282000" />
+      <workItem from="1531830045756" duration="23881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40524000" />
+    <option name="totallyTimeSpent" value="42123000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="176" y="43" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -7242,7 +7242,7 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
-            <marker date="1531912664752" expanded="true" signature="2564:2943" ph="..." />
+            <marker date="1531918048995" expanded="true" signature="2587:2966" ph="..." />
           </folding>
         </state>
       </provider>
@@ -7479,26 +7479,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Biz/WechatApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -7519,13 +7503,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Biz/WechatApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+        <state relative-caret-position="162">
+          <caret line="116" column="44" lean-forward="true" selection-start-line="116" selection-start-column="44" selection-end-line="116" selection-end-column="44" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
-            <marker date="1531912664752" expanded="true" signature="2564:2943" ph="..." />
+            <marker date="1531918048995" expanded="true" signature="2587:2966" ph="..." />
           </folding>
         </state>
       </provider>

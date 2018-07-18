@@ -17,4 +17,6 @@ Route::get('/', function () {
 Route::get('index', 'Controller@index');
 Route::get('accesstoken', 'Controller@accessToken');
 Route::get('test', 'Controller@test');
+Route::get('create', 'Controller@createMenu');
+
 
