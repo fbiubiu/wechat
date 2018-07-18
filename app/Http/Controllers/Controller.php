@@ -56,7 +56,7 @@ class Controller extends BaseController
     public function accessToken()
     {
         $redis = new Redis();
-        $redis->connect('127.0.0.1');
+        $redis->connect('47.52.146.221');
         $redis->auth('fengphp@126');
         $key = 'wechat:access_token';
         $access_token = $redis->get($key);
@@ -136,6 +136,7 @@ class Controller extends BaseController
         $client = new Client();
         $res = $client->request('POST',$url, $requesData);
         $res = $res->getBody();
+        echo $res;die;
         $res = json_decode($res,true);
 
         if($res['errcode'] == 0){
