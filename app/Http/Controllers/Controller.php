@@ -177,7 +177,8 @@ class Controller extends BaseController
 							<Content><![CDATA[%s]]></Content>
 							<FuncFlag>0</FuncFlag>
 							</xml>"; 
-                            // 判断发送的消息是否为空,不为空则进行回复            
+                            // 判断发送的消息是否为空,不为空则进行回复
+                $this->recordLog('textTpl:'.$textTpl);
 				if(!empty( $keyword )) 
                 {    // 回复的消息类型
               		$msgType = "text";
