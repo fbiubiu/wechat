@@ -71,7 +71,7 @@ class Controller extends BaseController
         return $access_token;
     }
 
-    public function responseMsg()
+    public function responseMsg1()
     {
         $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
         $this->recordLog('访问成功');
@@ -146,5 +146,56 @@ class Controller extends BaseController
         return $res;
 
     }
+
+	// 回复客户发送的消息
+    public function responseMsg()
+    {
+		//get post data, May be due to the different environments
+        // 接受微信服务器端传递过来的客户发送的数据
+		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+
+      	//判断客户端发送的消息是否为空
+		if (!empty($postStr)){
+                /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
+                   the best way is to check the validity of xml by yourself */
+                   // 防止xml实体攻击,提高安全性
+                libxml_disable_entity_loader(true);
+                // 将xml数据转化为对象
+              	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+                // 获取客户传递的数据
+                $fromUsername = $postObj->FromUserName;
+                $toUsername = $postObj->ToUserName;
+                $keyword = trim($postObj->Content);   // 用户发送的消息内容
+                $time = time();
+                // 拼接出回复客户端的xml数据格式
+                $textTpl = "<xml>
+							<ToUserName><![CDATA[%s]]></ToUserName>
+							<FromUserName><![CDATA[%s]]></FromUserName>
+							<CreateTime>%s</CreateTime>
+							<MsgType><![CDATA[%s]]></MsgType>
+							<Content><![CDATA[%s]]></Content>
+							<FuncFlag>0</FuncFlag>
+							</xml>"; 
+                            // 判断发送的消息是否为空,不为空则进行回复            
+				if(!empty( $keyword )) 
+                {    // 回复的消息类型
+              		$msgType = "text";
+                    // 回复的内容
+                	$contentStr = "Welcome to wechat world!";
+                    // 替换xml中占位符,完善发送消息的xml数据
+                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                    // 向客户端输出消息
+                	echo $resultStr;
+                }else{
+                	echo "Input something...";
+                }
+
+        }else {
+        	echo "";
+        	exit;
+        }
+    }
+
+	
 
 }
