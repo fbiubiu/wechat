@@ -154,7 +154,7 @@ class Controller extends BaseController
 		//get post data, May be due to the different environments
         // 接受微信服务器端传递过来的客户发送的数据
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
-
+        $this->recordLog('$postStr:'.json_encode($postStr));
       	//判断客户端发送的消息是否为空
 		if (!empty($postStr)){
                 /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
