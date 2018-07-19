@@ -153,7 +153,7 @@ class Controller extends BaseController
         $this->recordLog(date('Y-m-d h:i:s').' successs');
 		//get post data, May be due to the different environments
         // 接受微信服务器端传递过来的客户发送的数据
-		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+        $postStr = file_get_contents("php://input");
         $this->recordLog('$postStr:'.json_encode($postStr));
       	//判断客户端发送的消息是否为空
 		if (!empty($postStr)){
