@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('index', 'Controller@index');
+Route::post('index', 'Controller@index');
 Route::get('accesstoken', 'Controller@accessToken');
 Route::get('test', 'Controller@test');
 Route::get('create', 'Controller@createMenu');

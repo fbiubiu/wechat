@@ -150,7 +150,7 @@ class Controller extends BaseController
 	// 回复客户发送的消息
     public function responseMsg()
     {
-        $this->recordLog(date('Y-m-d h:i:s').'successs');
+        $this->recordLog(date('Y-m-d h:i:s').' successs');
 		//get post data, May be due to the different environments
         // 接受微信服务器端传递过来的客户发送的数据
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
